@@ -659,7 +659,7 @@ class HamlTree extends HamlParser {
             }
           }
           // render classes (dynamic because haml removes duplicates. The duplicates are known at runtime)
-          array_unique($class);
+          array_unique($class, SORT_REGULAR);
           if (count($class) > 0){
             $this->rText(" class=$q", false);
             $class_items = array();
